@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HotelManagement
 {
-    public partial class Form2 : Form
+    public partial class AboutUs2 : Form
     {
-        public Form2()
+        public AboutUs2()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
