@@ -1,19 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="AboutUs1.cs">
+    <Compile Update="Forms\AddBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AboutUs2.cs">
+    <Compile Update="Forms\AddCategorie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AboutUs3.cs">
+    <Compile Update="Forms\AddConsumption.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Services.cs">
+    <Compile Update="Forms\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HomePage.cs">
+    <Compile Update="Forms\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\AddReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\AddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\consumptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\reservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateCategrie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateConsumption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tools\Placeholder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Tools\RoudedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Tools\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Tools\RoundedFlowPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Views\AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\EmployeeDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Hotels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\RegistrationManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
