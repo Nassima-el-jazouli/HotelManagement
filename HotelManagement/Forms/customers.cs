@@ -16,5 +16,10 @@ namespace HotelManagement.Forms
         {
             InitializeComponent();
         }
+
+        private void customers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

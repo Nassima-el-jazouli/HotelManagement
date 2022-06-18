@@ -9,11 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HotelManagement.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelManagement.Forms
 {
-    public partial class AddCategorie : Form
+
+    public partial class UpdateCategorie : Form
     {
+        public Categorie categorie;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn(
@@ -26,37 +29,34 @@ namespace HotelManagement.Forms
 
 
             );
-        public Categorie Categorie = new Categorie();
-        public AddCategorie()
+
+        public UpdateCategorie()
         {
             InitializeComponent();
         }
 
-        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        public UpdateCategorie(Categorie categorie)
         {
-
+            InitializeComponent();
+            this.categorie = categorie;
         }
 
-        private void placeHolder2_TextChanged(object sender, EventArgs e)
+        private void UpdateCategrie_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void AddCategorie_Load(object sender, EventArgs e)
-        {
-            Database database = new Database();
-            //List<Categorie> Categories = database.Categories.ToList();
+            txtName.Text = categorie.Name;
+            txtPrice.Text = categorie.Prix.ToString();
+            txtDescription.Text = categorie.Description;
             txtName.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, txtName.Width, txtName.Height, 10, 10));
             txtPrice.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, txtPrice.Width, txtPrice.Height, 10, 10));
             txtDescription.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, txtDescription.Width, txtDescription.Height, 10, 10));
         }
 
-        private void lblTitle_Click(object sender, EventArgs e)
+        private void placeHolder1_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
 
-        private void placeHolder1_TextChanged(object sender, EventArgs e)
+        private void placeHolder2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -66,21 +66,20 @@ namespace HotelManagement.Forms
 
         }
 
-        private void roundedButton1_Click(object sender, EventArgs e)
+        private void roundedButton2_Click(object sender, EventArgs e)
         {
-            Database database = new Database();
-            Categorie categorie = new Categorie();
-            categorie.Id = database.Categories.Max(x => x.Id) + 1;
-            categorie.Name = txtName.Text;
-            categorie.Prix = Int32.Parse(txtPrice.Text);
-            categorie.Description = txtDescription.Text;
-            database.Categories.Add(categorie);
-            database.SaveChanges();
             this.Close();
         }
 
-        private void roundedButton2_Click(object sender, EventArgs e)
+        private void roundedButton1_Click(object sender, EventArgs e)
         {
+            Database database = new Database();
+            categorie.Name = txtName.Text;
+            categorie.Prix = Int32.Parse(txtPrice.Text);
+            categorie.Description = txtDescription.Text;
+            database.Categories.Attach(categorie);
+            database.Entry(categorie).State = EntityState.Modified;
+            database.SaveChanges();
             this.Close();
         }
     }

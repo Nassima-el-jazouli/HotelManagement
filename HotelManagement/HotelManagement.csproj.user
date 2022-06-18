@@ -49,7 +49,7 @@
     <Compile Update="Forms\UpdateBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\UpdateCategrie.cs">
+    <Compile Update="Forms\UpdateCategorie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\UpdateConsumption.cs">

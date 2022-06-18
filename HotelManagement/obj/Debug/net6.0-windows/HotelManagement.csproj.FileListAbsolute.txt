@@ -58,9 +58,9 @@ D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManage
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.AddReservation.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.AddRoom.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateBill.resources
-D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateCategrie.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateConsumption.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateCustomer.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateEmployee.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateReservation.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateRoom.resources
+D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.UpdateCategorie.resources
