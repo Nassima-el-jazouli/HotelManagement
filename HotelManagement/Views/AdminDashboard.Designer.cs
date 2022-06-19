@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,15 +71,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // guna2Transition1
-            // 
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
@@ -123,22 +118,6 @@
             this.button9.Text = "Logout";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 12.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(3, 555);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(285, 56);
-            this.button8.TabIndex = 16;
-            this.button8.Text = "Check Out";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -283,7 +262,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(391, 27);
+            this.lblTitle.Location = new System.Drawing.Point(406, 18);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(122, 47);
             this.lblTitle.TabIndex = 0;
@@ -326,7 +305,6 @@
             this.roundedButton8.TabIndex = 8;
             this.roundedButton8.TextColor = System.Drawing.Color.White;
             this.roundedButton8.UseVisualStyleBackColor = false;
-            this.roundedButton8.Click += new System.EventHandler(this.roundedButton8_Click);
             // 
             // roundedButton7
             // 
@@ -503,7 +481,6 @@
         private Panel panel1;
         private Button button10;
         private Button button9;
-        private Button button8;
         private Button button7;
         private Button button6;
         private Button button5;

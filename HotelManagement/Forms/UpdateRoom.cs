@@ -16,7 +16,6 @@ namespace HotelManagement.Forms
     {
         public Chambre chambre;
 
-
         public UpdateRoom(Chambre chambre)
         {
             InitializeComponent();
@@ -27,7 +26,7 @@ namespace HotelManagement.Forms
         {
             Database database = new Database();
             chambre.NumTel = txtNumTel.Text;
-            chambre.Prix = Int32.Parse(txtPrice.Text.ToString());
+            chambre.Prix = chambre.Prix;
             int CatId = Int16.Parse(comboBox1.SelectedValue.ToString());
             chambre.CategorieId = CatId;
             int HotId = Int16.Parse(comboBox2.SelectedValue.ToString());
@@ -42,7 +41,7 @@ namespace HotelManagement.Forms
         private void UpdateRoom_Load(object sender, EventArgs e)
         {
             txtNumTel.Text = chambre.NumTel;
-            txtPrice.Text = chambre.Prix.ToString();
+            //float price = chambre.Prix;
             Database database = new Database();
             List<Categorie> Categories = database.Categories.ToList();
             List<Hotel> Hotels = database.Hotels.ToList();

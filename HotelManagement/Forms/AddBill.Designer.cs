@@ -40,6 +40,7 @@
             this.MinimumSize = new System.Drawing.Size(808, 485);
             this.Name = "AddBill";
             this.Text = "AddBill";
+            this.Load += new System.EventHandler(this.AddBill_Load);
             this.ResumeLayout(false);
 
         }

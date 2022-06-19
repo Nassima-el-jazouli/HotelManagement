@@ -33,7 +33,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCancel = new HotelManagement.Tools.RoundedButton();
             this.btnSave = new HotelManagement.Tools.RoundedButton();
-            this.txtPrice = new HotelManagement.Tools.PlaceHolder();
             this.txtNumTel = new HotelManagement.Tools.PlaceHolder();
             this.categorieBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -110,19 +109,6 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtPrice
-            // 
-            this.txtPrice.BackColor = System.Drawing.Color.White;
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.txtPrice.ForeColor = System.Drawing.Color.Gray;
-            this.txtPrice.Location = new System.Drawing.Point(96, 241);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PlaceHolderText = "Price";
-            this.txtPrice.Size = new System.Drawing.Size(355, 32);
-            this.txtPrice.TabIndex = 13;
-            this.txtPrice.Text = "  Price";
-            // 
             // txtNumTel
             // 
             this.txtNumTel.BackColor = System.Drawing.Color.White;
@@ -155,7 +141,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(96, 323);
+            this.comboBox1.Location = new System.Drawing.Point(96, 268);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(355, 28);
             this.comboBox1.TabIndex = 17;
@@ -163,7 +149,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(96, 400);
+            this.comboBox2.Location = new System.Drawing.Point(96, 376);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(355, 28);
             this.comboBox2.TabIndex = 18;
@@ -179,7 +165,6 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtNumTel);
             this.MaximumSize = new System.Drawing.Size(560, 647);
             this.MinimumSize = new System.Drawing.Size(560, 647);
@@ -203,7 +188,6 @@
         private Label lblTitle;
         private Tools.RoundedButton btnCancel;
         private Tools.RoundedButton btnSave;
-        private Tools.PlaceHolder txtPrice;
         private Tools.PlaceHolder txtNumTel;
         private BindingSource categorieBindingSource1;
         private BindingSource categorieBindingSource;

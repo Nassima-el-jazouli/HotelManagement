@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HotelManagement.Tools;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelManagement.Data
@@ -12,6 +13,10 @@ namespace HotelManagement.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
            => optionsBuilder.UseNpgsql(
               "Host=localhost;Database=hotelManagement;Username=postgres;Password=root@123");
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyUtcDateTimeConverter();//Put before seed data and after model creation
+        }
 
         public DbSet<Adresse> Adresses { get; set; }
         public DbSet<Categorie> Categories { get; set; }

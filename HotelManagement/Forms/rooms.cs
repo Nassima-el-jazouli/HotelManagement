@@ -23,7 +23,7 @@ namespace HotelManagement.Forms
         private void rooms_Load(object sender, EventArgs e)
         {
             Database database = new Database();
-            List<Chambre> Chambres = database.Chambres.Include(x=>x.Hotel).Include(x=>x.Categorie).ToList();
+            List<Chambre> Chambres = database.Chambres.Include(x=>x.Reservations).Include(x=>x.Hotel).Include(x=>x.Categorie).ToList();
             int y = 0;
             foreach (Chambre ch in Chambres)
             {
@@ -34,6 +34,7 @@ namespace HotelManagement.Forms
                 Label lblNumTel = new Label();
                 RoundedButton Edit = new RoundedButton();
                 RoundedButton Delete = new RoundedButton();
+                RoundedButton btnReserved = new RoundedButton();
 
                 //LpPanel
                 LpPanel.SuspendLayout();
@@ -58,7 +59,10 @@ namespace HotelManagement.Forms
                 lblPrice.Name = "lblPrice";
                 lblPrice.Size = new System.Drawing.Size(50, 20);
                 lblPrice.TabIndex = 7;
-                lblPrice.Text = ch.Prix.ToString();
+                Hotel hotel = database.Hotels.Where(x=>x.Id == ch.HotelId).First();
+                Classement classement = database.Classements.Where(x => x.Id == hotel.ClassementId).First();
+                Categorie categorie = database.Categories.Where(x => x.Id == ch.CategorieId).First();
+                lblPrice.Text = (categorie.Prix * classement.Note).ToString();
 
                 //lblHotel
                 lblHotel.AutoSize = true;
@@ -71,21 +75,35 @@ namespace HotelManagement.Forms
 
                 //lblCategorie
                 lblCategorie.AutoSize = true;
-                lblCategorie.Location = new System.Drawing.Point(489, 17);
+                lblCategorie.Location = new System.Drawing.Point(430, 17);
                 lblCategorie.Name = "lblCategorie";
                 lblCategorie.Size = new System.Drawing.Size(50, 20);
                 lblCategorie.TabIndex = 13;
                 lblCategorie.Text = ch.Categorie.Name;
 
-
-                /*if (ch.Reserved = true)
+                // btnReserved
+                // 
+                btnReserved.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(130)))), ((int)(((byte)(184)))));
+                btnReserved.BorderColor = System.Drawing.Color.PaleVioletRed;
+                btnReserved.BorderRadius = 10;
+                btnReserved.BorderSize = 0;
+                btnReserved.FlatAppearance.BorderSize = 0;
+                btnReserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnReserved.ForeColor = System.Drawing.Color.White;
+                btnReserved.Location = new System.Drawing.Point(613, 18);
+                btnReserved.Name = "btnReserved";
+                btnReserved.Size = new System.Drawing.Size(19, 19);
+                btnReserved.TabIndex = 14;
+                btnReserved.TextColor = System.Drawing.Color.White;
+                btnReserved.UseVisualStyleBackColor = false;
+                if (ch.Reserved = true)
                 {
                     btnReserved.BackgroundColor = System.Drawing.Color.Red;
                 }
                 if (ch.Reserved = false)
                 {
-                    btnReserved.BackgroundColor = System.Drawing.Color.Red;
-                }*/
+                    btnReserved.BackgroundColor = System.Drawing.Color.Green;
+                }
 
                 //Edit
                 Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(130)))), ((int)(((byte)(184)))));
@@ -128,6 +146,7 @@ namespace HotelManagement.Forms
                 LpPanel.Controls.Add(lblHotel);
                 LpPanel.Controls.Add(lblPrice);
                 LpPanel.Controls.Add(lblNumTel);
+                LpPanel.Controls.Add(btnReserved);
                 LpPanel.Controls.Add(Edit);
                 LpPanel.Controls.Add(Delete);
                 this.Controls.Add(LpPanel);

@@ -28,9 +28,6 @@
     <Compile Update="Forms\categories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\checkout.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\consumptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +92,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\RegistrationManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Services.cs">

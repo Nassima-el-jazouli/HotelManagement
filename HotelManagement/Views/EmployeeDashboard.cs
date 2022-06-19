@@ -127,11 +127,6 @@ namespace HotelManagement.Views
             OpenChildForm(new Forms.bills(), sender);
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.checkout(), sender);
-        }
-
         private void button9_Click(object sender, EventArgs e)
         {
             HomePage homePage = new HomePage();
@@ -164,11 +159,6 @@ namespace HotelManagement.Views
         private void roundedButton7_Click(object sender, EventArgs e)
         {
             OpenChildForm_1(new Forms.bills(), sender);
-        }
-
-        private void roundedButton8_Click(object sender, EventArgs e)
-        {
-            OpenChildForm_1(new Forms.checkout(), sender);
         }
     }
 }

@@ -173,9 +173,9 @@
             this.NumTel.ForeColor = System.Drawing.Color.Black;
             this.NumTel.Location = new System.Drawing.Point(33, 19);
             this.NumTel.Name = "NumTel";
-            this.NumTel.Size = new System.Drawing.Size(79, 31);
+            this.NumTel.Size = new System.Drawing.Size(115, 31);
             this.NumTel.TabIndex = 4;
-            this.NumTel.Text = "Phone";
+            this.NumTel.Text = "Categorie";
             // 
             // Price
             // 

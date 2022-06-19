@@ -41,10 +41,8 @@ D:\Projects\HotelManagement\HotelManagement\bin\Debug\net6.0-windows\Npgsql.dll
 D:\Projects\HotelManagement\HotelManagement\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Views.EmployeeDashboard.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Views.Hotels.resources
-D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Views.RegistrationManagement.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.bills.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.categories.resources
-D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.checkout.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.customers.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.employees.resources
 D:\Projects\HotelManagement\HotelManagement\obj\Debug\net6.0-windows\HotelManagement.Forms.reservations.resources

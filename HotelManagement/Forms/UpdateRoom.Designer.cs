@@ -30,7 +30,6 @@
         {
             this.txtNumTel = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.roundedButton2 = new HotelManagement.Tools.RoundedButton();
             this.roundedButton1 = new HotelManagement.Tools.RoundedButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -61,16 +60,6 @@
             this.lblTitle.Text = "Update Room";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtPrice
-            // 
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.txtPrice.Location = new System.Drawing.Point(96, 241);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PlaceholderText = "  Price";
-            this.txtPrice.Size = new System.Drawing.Size(355, 32);
-            this.txtPrice.TabIndex = 24;
-            // 
             // roundedButton2
             // 
             this.roundedButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(130)))), ((int)(((byte)(184)))));
@@ -82,7 +71,7 @@
             this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.roundedButton2.ForeColor = System.Drawing.Color.White;
-            this.roundedButton2.Location = new System.Drawing.Point(96, 521);
+            this.roundedButton2.Location = new System.Drawing.Point(96, 432);
             this.roundedButton2.Name = "roundedButton2";
             this.roundedButton2.Size = new System.Drawing.Size(177, 50);
             this.roundedButton2.TabIndex = 22;
@@ -102,7 +91,7 @@
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.roundedButton1.ForeColor = System.Drawing.Color.White;
-            this.roundedButton1.Location = new System.Drawing.Point(279, 521);
+            this.roundedButton1.Location = new System.Drawing.Point(279, 432);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(172, 50);
             this.roundedButton1.TabIndex = 21;
@@ -125,7 +114,7 @@
             // 
             this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(96, 413);
+            this.comboBox2.Location = new System.Drawing.Point(96, 334);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(355, 28);
             this.comboBox2.TabIndex = 26;
@@ -134,7 +123,7 @@
             // 
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(96, 331);
+            this.comboBox1.Location = new System.Drawing.Point(96, 245);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(355, 28);
             this.comboBox1.TabIndex = 25;
@@ -148,7 +137,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtNumTel);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.roundedButton2);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.panelTitleBar);
@@ -168,7 +156,6 @@
 
         private TextBox txtNumTel;
         private Label lblTitle;
-        private TextBox txtPrice;
         private Tools.RoundedButton roundedButton2;
         private Tools.RoundedButton roundedButton1;
         private Panel panelTitleBar;
