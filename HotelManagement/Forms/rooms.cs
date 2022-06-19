@@ -146,7 +146,7 @@ namespace HotelManagement.Forms
                 LpPanel.Controls.Add(lblHotel);
                 LpPanel.Controls.Add(lblPrice);
                 LpPanel.Controls.Add(lblNumTel);
-                LpPanel.Controls.Add(btnReserved);
+                //LpPanel.Controls.Add(btnReserved);
                 LpPanel.Controls.Add(Edit);
                 LpPanel.Controls.Add(Delete);
                 this.Controls.Add(LpPanel);
@@ -202,6 +202,11 @@ namespace HotelManagement.Forms
         {
             AddRoom addRoom = new AddRoom();
             addRoom.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

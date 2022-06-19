@@ -16,5 +16,33 @@ namespace HotelManagement.Forms
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            lblReservationId.Text = "";
+            lblChambreId.Text = "";
+            lblClientName.Text = "";
+            Total.Text = "";
+            lblDate.Text = "";
+
+            txtReservationId.Clear();
+            txtChambreId.Clear();
+            txtClientName.Clear();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+
+            lblChambreId.Text = txtChambreId.Text;
+            lblClientName.Text = txtClientName.Text;
+            lblReservationId.Text = txtReservationId.Text;
+            Total.Text = "6500 Dhs";
+
+
+
+            lblDate.Text = Date.Value.ToString();
+
+        }
     }
 }

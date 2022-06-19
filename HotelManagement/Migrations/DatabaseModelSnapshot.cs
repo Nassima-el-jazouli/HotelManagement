@@ -221,6 +221,9 @@ namespace HotelManagement.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("FactureId")
+                        .HasColumnType("integer");
+
                     b.Property<float>("Prix")
                         .HasColumnType("real");
 
@@ -229,6 +232,8 @@ namespace HotelManagement.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FactureId");
 
                     b.ToTable("Prestations");
                 });
@@ -247,20 +252,10 @@ namespace HotelManagement.Migrations
                     b.Property<bool>("Payed")
                         .HasColumnType("boolean");
 
-                    b.Property<int>("PrestationId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ReservationId")
-                        .HasColumnType("integer");
-
                     b.Property<float>("Total")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PrestationId");
-
-                    b.HasIndex("ReservationId");
 
                     b.ToTable("Factures");
                 });
@@ -291,6 +286,9 @@ namespace HotelManagement.Migrations
                     b.Property<DateTime>("DatePayeArrhes")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("FactureId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
 
@@ -299,6 +297,8 @@ namespace HotelManagement.Migrations
                     b.HasIndex("ChambreId");
 
                     b.HasIndex("ClientId");
+
+                    b.HasIndex("FactureId");
 
                     b.HasIndex("UserId");
 
@@ -353,21 +353,6 @@ namespace HotelManagement.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("PrestationReservation", b =>
-                {
-                    b.Property<int>("PrestationsId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("ReservationsId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("PrestationsId", "ReservationsId");
-
-                    b.HasIndex("ReservationsId");
-
-                    b.ToTable("PrestationReservation");
-                });
-
             modelBuilder.Entity("HotelManagement.Data.Chambre", b =>
                 {
                     b.HasOne("HotelManagement.Data.Categorie", "Categorie")
@@ -406,23 +391,15 @@ namespace HotelManagement.Migrations
                     b.Navigation("Classement");
                 });
 
-            modelBuilder.Entity("HotelManagement.Data.PrestationReservation", b =>
+            modelBuilder.Entity("HotelManagement.Data.Prestation", b =>
                 {
-                    b.HasOne("HotelManagement.Data.Prestation", "Prestation")
-                        .WithMany()
-                        .HasForeignKey("PrestationId")
+                    b.HasOne("HotelManagement.Data.PrestationReservation", "Facture")
+                        .WithMany("Prestations")
+                        .HasForeignKey("FactureId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HotelManagement.Data.Reservation", "Reservation")
-                        .WithMany()
-                        .HasForeignKey("ReservationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Prestation");
-
-                    b.Navigation("Reservation");
+                    b.Navigation("Facture");
                 });
 
             modelBuilder.Entity("HotelManagement.Data.Reservation", b =>
@@ -439,6 +416,12 @@ namespace HotelManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("HotelManagement.Data.PrestationReservation", "Facture")
+                        .WithMany("Reservations")
+                        .HasForeignKey("FactureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HotelManagement.Data.User", "User")
                         .WithMany("Reservations")
                         .HasForeignKey("UserId")
@@ -449,22 +432,9 @@ namespace HotelManagement.Migrations
 
                     b.Navigation("Client");
 
+                    b.Navigation("Facture");
+
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("PrestationReservation", b =>
-                {
-                    b.HasOne("HotelManagement.Data.Prestation", null)
-                        .WithMany()
-                        .HasForeignKey("PrestationsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HotelManagement.Data.Reservation", null)
-                        .WithMany()
-                        .HasForeignKey("ReservationsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("HotelManagement.Data.Adresse", b =>
@@ -496,6 +466,13 @@ namespace HotelManagement.Migrations
             modelBuilder.Entity("HotelManagement.Data.Hotel", b =>
                 {
                     b.Navigation("Chambres");
+                });
+
+            modelBuilder.Entity("HotelManagement.Data.PrestationReservation", b =>
+                {
+                    b.Navigation("Prestations");
+
+                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("HotelManagement.Data.User", b =>

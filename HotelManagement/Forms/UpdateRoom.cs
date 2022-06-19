@@ -15,11 +15,17 @@ namespace HotelManagement.Forms
     public partial class UpdateRoom : Form
     {
         public Chambre chambre;
+        private Prestation prestation;
 
         public UpdateRoom(Chambre chambre)
         {
             InitializeComponent();
             this.chambre = chambre;
+        }
+
+        public UpdateRoom(Prestation prestation)
+        {
+            this.prestation = prestation;
         }
 
         private void roundedButton1_Click(object sender, EventArgs e)

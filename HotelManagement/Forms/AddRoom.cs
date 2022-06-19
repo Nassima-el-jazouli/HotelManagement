@@ -32,7 +32,6 @@ namespace HotelManagement.Forms
             Classement classement = database.Classements.Where(x => x.Id == hotel.ClassementId).First();
             Categorie categorie = database.Categories.Where(x => x.Id == chambre.CategorieId).First();
             chambre.Prix = Int32.Parse((categorie.Prix * classement.Note).ToString());
-            chambre.Id = database.Categories.Max(x => x.Id) + 1;
             chambre.Reserved = false;
             database.Chambres.Add(chambre);
             database.SaveChanges();

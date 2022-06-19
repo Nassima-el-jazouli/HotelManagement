@@ -73,7 +73,7 @@
             this.txtName.PlaceHolderText = "Name";
             this.txtName.Size = new System.Drawing.Size(355, 32);
             this.txtName.TabIndex = 6;
-            this.txtName.Text = "Name";
+            this.txtName.Text = "  Name";
             this.txtName.TextChanged += new System.EventHandler(this.placeHolder1_TextChanged);
             // 
             // txtPrice
@@ -87,7 +87,7 @@
             this.txtPrice.PlaceHolderText = "Price";
             this.txtPrice.Size = new System.Drawing.Size(355, 32);
             this.txtPrice.TabIndex = 7;
-            this.txtPrice.Text = "Price";
+            this.txtPrice.Text = "  Price";
             this.txtPrice.TextChanged += new System.EventHandler(this.placeHolder2_TextChanged);
             // 
             // txtDescription

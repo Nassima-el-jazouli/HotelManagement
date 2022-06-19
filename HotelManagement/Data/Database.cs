@@ -28,6 +28,10 @@ namespace HotelManagement.Data
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<PrestationReservation> PrestationReservations { get; set; }
+        public DbSet<ArchiveClient> ArchiveClients { get; set; }
+
+        public DbSet<ArchiveReservation> ArchiveReservations { get; set; }
+        public DbSet<ArchivePrestation> ArchivePrestations { get; set; }
 
     }
 }
